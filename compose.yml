@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+    react:
+        image: node:20-alpine
+        build:
+            context: ./frontend
+            dockerfile: ui.dockerfile
+        ports:
+          - 3000:5173
+        volumes:
+            - ./frontend:/app/frontend
+            - /app/frontend/node_modules
+        networks:
+            - react
+    api:
+        image: golang:1.22-alpine3.19
+        build: 
+            context: ./api
+            dockerfile: api.dockerfile
+        ports:
+            - 8000:8000
+        volumes:
+            - ./api:/app/api
+        networks:
+            - api
+        hostname: localhost
+
+networks:
+    api:
+    react:
+            
