@@ -21,7 +21,7 @@ func main() {
 }
 
 func getHello(w http.ResponseWriter, r *http.Request) {
-	WriteJSON(w, 200, "Hello there!")
+	WriteJSON(w, 200, "Hello!")
 }
 
 func WriteJSON(w http.ResponseWriter, status int, v any) {
