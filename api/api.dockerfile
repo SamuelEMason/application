@@ -1,6 +1,6 @@
 FROM golang:1.22-alpine3.19
 
-WORKDIR /app/api
+WORKDIR /app
 
 COPY go.mod go.sum ./
 
@@ -8,6 +8,13 @@ RUN go mod download
 
 COPY *.go ./
 
-RUN go build -o /app/bin/api
+## Hot-Reloading w/ Air
+RUN go get -u github.com/cosmtrek/air
+RUN go install github.com/cosmtrek/air@latest
 
-CMD [ "/app/bin/api" ]
+ENTRYPOINT [ "air" ]
+
+
+# RUN go build -o /app/bin/api
+
+# CMD [ "/app/bin/api" ]
