@@ -1,30 +1,16 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router';
+import ConnectionListPage from './pages/ConnectionListPage';
+import ConnectionPage from './pages/ConnectionPage';
+import Navbar from './components/Navbar';
 
 function App() {
-	const [hello, setHello] = useState('');
-
-	useEffect(() => {
-		(async () => {
-			try {
-				const response = await axios.get(
-					'http://localhost:8000/hello'
-				);
-				if (response.status === 200) {
-					setHello(response.data);
-				} else {
-					console.error(`HTTP error! Status: ${response.status}`);
-				}
-			} catch (err) {
-				console.log('error');
-			}
-		})();
-	}, []);
-
 	return (
-		<main>
-			<h1>My Great Application</h1>
-			<h3>{hello}</h3>
+		<main className='min-h-screen bg-cyan-950'>
+			<Navbar />
+			<Routes>
+				<Route path='/connections/:id' element={<ConnectionPage />} />
+				<Route path='/' element={<ConnectionListPage />} />
+			</Routes>
 		</main>
 	);
 }

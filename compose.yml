@@ -7,7 +7,7 @@ services:
             context: ./frontend
             dockerfile: ui.dockerfile
         ports:
-          - 3000:5173
+            - 3000:5173
         volumes:
             - ./frontend:/app/
             - /app/node_modules
@@ -15,7 +15,7 @@ services:
             - react
     api:
         image: golang:1.22-alpine3.19
-        build: 
+        build:
             context: ./api
             dockerfile: api.dockerfile
         ports:
@@ -29,4 +29,3 @@ services:
 networks:
     api:
     react:
-            

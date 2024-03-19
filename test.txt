@@ -1,0 +1,40 @@
+___________________________________________________
+STEP 1: 	File1 to dataframe
+
+dict sample -> season
+file1: sample _ season
+file1_df: sample season
+
+
+___________________________________________________
+STEP 2: 	Populate dictionary from file1 data
+
+dict { sample: season }
+
+loop through file1_df:
+	dict[sample] = season
+
+
+___________________________________________________
+STEP 3: 	File2 to dataframe
+
+file2: sample _ 
+T(file2)
+file2_df: sample _
+file2_df.addColumn('season')
+
+
+___________________________________________________
+STEP 4:		Populate new column with dictionary data
+
+loop through file2_df:
+	if sample in dict:
+		season = dict[sample]
+		file2_df['season'] = season
+
+
+___________________________________________________
+STEP 5:		Export to csv file
+
+reverseT(file2_df)
+export_to_csv(file2_df)

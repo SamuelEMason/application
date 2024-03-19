@@ -5,3 +5,4 @@ down:
 	@docker-compose down
 
 reset: down up
+
