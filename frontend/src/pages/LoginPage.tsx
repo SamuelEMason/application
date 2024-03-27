@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import Container from "../components/Container";
+import { Link } from "react-router-dom";
 
 export default function LoginPage() {
 	const [email, setEmail] = useState('');
@@ -52,6 +53,9 @@ export default function LoginPage() {
 						Submit
 					</button>
 				</div>
+				<p className='-mt-4 text-sm text-white text-opacity-65'>
+					dont have an account? <Link to='/register' className="text-blue-400">click to register</Link>
+				</p>
 			</div>
 		</Container>
 	);
