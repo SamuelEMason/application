@@ -1,29 +1,34 @@
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import Container from '../components/Container';
-import { useEffect, useState } from 'react';
-import { type ConnectionType, mockConnections } from '../data/MockConnections';
+import MessageWindow from '../components/messages/MessageWindow';
+import { mockConnections, type ConnectionType } from '../data/MockConnections';
 
 export default function ConnectionPage() {
 	const { id } = useParams();
-	const [receiver, setReceiver] = useState<ConnectionType | undefined>();
+	const [connection, setConnection] = useState<ConnectionType>({
+		connID: '0',
+		name: '',
+		connection: '',
+		time: '',
+		icon: '',
+	});
 
 	useEffect(() => {
 		const filteredConnections: ConnectionType[] = mockConnections.filter(
-			(r) => r.id === id
+			(r) => r.connID === id
 		);
 
 		if (filteredConnections.length > 0) {
-			setReceiver(filteredConnections[0]);
-		} else {
-			setReceiver(undefined);
+			setConnection(filteredConnections[0]);
 		}
-	}, [id, setReceiver]);
+	}, [id, setConnection]);
 
 	return (
 		<Container>
-			<div className='px-8'>
-				<h2 className='text-3xl font-bold'>{receiver?.name}</h2>
-				<p>{receiver?.connection}</p>
+			<div className='flex flex-col gap-4 px-8'>
+				<h2 className='text-3xl font-bold'>{connection?.name}</h2>
+				<MessageWindow connection={connection} />
 			</div>
 		</Container>
 	);

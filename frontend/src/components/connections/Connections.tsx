@@ -13,11 +13,11 @@ export default function Connections() {
 		<div className='w-full'>
 			{connections.map((connection: ConnectionType) => (
 				<Connection
-					key={connection.id}
+					key={connection.connID}
 					name={connection.name}
 					time={connection.time}
 					connection={connection.connection}
-					id={connection.id}
+					id={connection.connID}
 				/>
 			))}
 		</div>

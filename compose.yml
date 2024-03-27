@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
     react:
-        image: node:20-alpine
+        image: node:20-alpine3.19
         build:
             context: ./frontend
             dockerfile: ui.dockerfile
