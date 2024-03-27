@@ -12,7 +12,7 @@ export default function MenuLinks({handleClose}: MenuLinkProps) {
 		<div className='h-[15rem]'>
 			<ul className='flex flex-col items-center justify-center w-full h-full gap-4'>
 				{linkItems.map((item) => (
-					<Link onClick={handleClose} to={item}>{capitalize(item)}</Link>
+					<Link key={item} onClick={handleClose} to={item}>{capitalize(item)}</Link>
 				))}
 			</ul>
 		</div>
