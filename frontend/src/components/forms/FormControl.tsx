@@ -22,7 +22,7 @@ export default function FormControl({
 				type={type}
 				onChange={onChange}
 				value={value}
-				className='text-black outline-none h-[2em] w-2/3 p-4'
+				className='text-white outline-none h-[2.5em] w-2/3 p-4 bg-black opacity-80'
 			/>
 		</div>
 	);

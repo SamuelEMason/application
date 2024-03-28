@@ -12,26 +12,21 @@ export default function FormPageRedirect({ label }: FormPageRedirectProps) {
 			: label === 'register'
 			? 'Already '
 			: '') + 'have an account? ';
-			
-		const oppositeLabel = 
-			label === 'login'
-				? 'register'
-				: label === 'register'
-				? "login"
-				: '';
-	
-		const redirectURL =
-			label === 'login'
-				? '/register'
-				: label === 'register'
-				? "/login"
-				: '';
+
+	const oppositeLabel =
+		label === 'login' ? 'register' : label === 'register' ? 'login' : '';
+
+	const redirectURL =
+		label === 'login' ? '/register' : label === 'register' ? '/login' : '';
 
 	return (
-		<p className='-mt-4 text-sm text-white text-opacity-65'>
+		<p className='-mt-6 text-sm text-white text-opacity-45'>
 			{fullLabel}
 
-			<Link to={redirectURL} className='text-blue-400 hover:underline'>
+			<Link
+				to={redirectURL}
+				className='text-blue-400 text-opacity-75 hover:underline'
+			>
 				Click to {capitalize(oppositeLabel)}
 			</Link>
 		</p>
