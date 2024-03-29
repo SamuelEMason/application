@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import Container from '../components/Container';
+import Container from '../components/container/Container';
 import MessageWindow from '../components/messages/MessageWindow';
 import { mockConnections, type ConnectionType } from '../data/MockConnections';
 

@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react';
 import { useNavigate } from 'react-router';
-import Container from '../components/Container';
+import Container from '../components/container/Container';
 import Form from '../components/forms/Form';
 import FormControl from '../components/forms/FormControl';
 import FormPageRedirect from '../components/forms/FormPageRedirect';

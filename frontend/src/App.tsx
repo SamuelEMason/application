@@ -2,12 +2,12 @@ import { Route, Routes } from 'react-router';
 import ConnectionListPage from './pages/ConnectionListPage';
 import ConnectionPage from './pages/ConnectionPage';
 import Navbar from './components/Navbar';
-import RegistrationPage from './pages/RegistrationPage';
 import LoginPage from './pages/LoginPage';
+import RegistrationPage from './pages/RegistrationPage';
 
 function App() {
 	return (
-		<main className='flex flex-col h-screen bg-cyan-950'>
+		<main className='flex flex-col justify-center min-h-screen bg-cyan-950'>
 			<Navbar />
 			<Routes>
 				<Route path='/connections/:id' element={<ConnectionPage />} />

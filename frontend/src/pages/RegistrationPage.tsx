@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react';
 import { useNavigate } from 'react-router';
-import Container from '../components/Container';
+import Container from '../components/container/Container';
 import Form from '../components/forms/Form';
 import FormControl from '../components/forms/FormControl';
 import FormPageRedirect from '../components/forms/FormPageRedirect';
@@ -26,7 +26,8 @@ export default function RegistrationPage() {
 		<Container>
 			<div className='flex flex-col items-center justify-center w-full gap-8 p-16'>
 				<h1 className='text-3xl'>Register</h1>
-				<Form buttonLabel='Register Account'
+				<Form
+					buttonLabel='Register Account'
 					onSubmit={(e: FormEvent) => handleSubmit(e)}
 				>
 					<FormControl

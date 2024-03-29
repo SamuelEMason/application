@@ -1,6 +1,6 @@
-import Container from "../components/Container";
-import Searchbar from "../components/Searchbar";
-import Messages from "../components/connections/Connections";
+import Container from '../components/container/Container';
+import Searchbar from '../components/Searchbar';
+import Messages from '../components/connections/Connections';
 
 export default function ConnectionListPage() {
 	return (
