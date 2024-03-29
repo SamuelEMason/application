@@ -17,7 +17,7 @@ export default function MenuLinks({ handleClose }: MenuLinkProps) {
 						{capitalize(item)}
 					</Link>
 				))}
-				<Emoji emoji='🫡' size='6xl' />
+				<Emoji emoji='🦆' size='text-6xl' />
 			</ul>
 		</div>
 	);

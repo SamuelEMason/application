@@ -1,0 +1,15 @@
+___NOTES____/::
+
+Feature List:
+
+	_____FEATURE____________________|_PRIORITY____/
+	-	Search functionality ---------| * * *
+	- Auth -------------------------| * * * * *
+	- Websocket message service ----| * * * *
+	- File sharing -----------------| * *
+	- Form validation --------------| * * *
+	- New message popup ------------| * * * *
+	- Admin dashboard --------------| * *
+	- Customize Tailwind -----------| * * *
+	- Responsive Designs (clamp!) --| * *
+	- Accessibility ----------------| *

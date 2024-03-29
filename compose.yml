@@ -25,7 +25,23 @@ services:
         networks:
             - api
         hostname: localhost
+        depends_on:
+            - db
+    db:
+        container_name: db
+        image: postgres
+        environment:
+            POSTGRES_PASSWORD: postgres
+            POSTGRES_USER: postgres
+            POSTGRES_DB: postgres
+        ports:
+        - "5432:5432"
+        volumes:
+        - pgdata:/var/lib/postgresql/data
 
 networks:
     api:
     react:
+
+volumes:
+    pgdata: {}
