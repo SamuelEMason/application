@@ -7,7 +7,7 @@ import RegistrationPage from './pages/RegistrationPage';
 
 function App() {
 	return (
-		<main className='flex flex-col justify-center min-h-screen bg-cyan-950'>
+		<main className='flex flex-col justify-center min-h-screen bg-stone-950'>
 			<Navbar />
 			<Routes>
 				<Route path='/connections/:id' element={<ConnectionPage />} />

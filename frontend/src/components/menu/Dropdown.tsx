@@ -11,9 +11,9 @@ export default function Dropdown() {
 	};
 
 	return (
-		<div className='relative'>
+		<div className='relative flex outline-none'>
 			<button onClick={() => setIsOpen((prevState) => !prevState)}>
-				{!isOpen && <LuMenu color='black' size={40} />}
+				{!isOpen && <LuMenu color='gray' size={40} />}
 			</button>
 			<Menu isOpen={isOpen} handleClose={handleClose}>
 				<MenuLinks handleClose={handleClose} />
