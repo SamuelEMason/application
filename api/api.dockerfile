@@ -13,8 +13,3 @@ RUN go get -u github.com/cosmtrek/air
 RUN go install github.com/cosmtrek/air@latest
 
 ENTRYPOINT [ "air" ]
-
-
-# RUN go build -o /app/bin/api
-
-# CMD [ "/app/bin/api" ]
