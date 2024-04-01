@@ -26,7 +26,7 @@ export default function ConnectionPage() {
 
 	return (
 		<Container>
-			<div className='flex flex-col gap-4 px-8'>
+			<div className='flex flex-col gap-4'>
 				<h2 className='text-3xl font-bold'>{connection?.name}</h2>
 				<MessageWindow connection={connection} />
 			</div>

@@ -72,7 +72,7 @@ export default function MessageWindow({ connection }: MessageWindowProps) {
 				})}
 				<div ref={messageEndRef}></div>
 			</div>
-			<div className='inset-x-0 bottom-0 flex flex-col '>
+			<div className='inset-x-0 bottom-0 flex flex-col'>
 				<textarea
 					ref={inputRef}
 					rows={2}
@@ -84,7 +84,7 @@ export default function MessageWindow({ connection }: MessageWindowProps) {
 					onFocus={() => setIsFocused(true)}
 					onBlur={() => setIsFocused(false)}
 					value={currMessage}
-					className='w-full text-white bg-black outline-none resize-none min-h-4'
+					className='w-full p-2 text-white bg-black shadow-inner outline-none resize-none min-h-4 shadow-slate-800 outline-1 outline-slate-800'
 				/>
 				<button
 					onClick={handleMessageSend}

@@ -6,8 +6,8 @@ export default function ConnectionListPage() {
 	return (
 		<Container>
 			<div className='flex flex-col gap-4'>
-				<div className='flex flex-col gap-4 px-8'>
-					<h1 className='font-bold text-3xl'>Messages</h1>
+				<div className='flex flex-col gap-4'>
+					<h1 className='text-3xl font-bold'>Messages</h1>
 					<Searchbar />
 				</div>
 				<Messages />

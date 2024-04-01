@@ -11,8 +11,8 @@ services:
         volumes:
             - ./frontend:/app/
             - /app/node_modules
-        networks:
-            - react
+        # networks:
+        #     - react
     api:
         image: golang:1.22-alpine3.19
         build:
@@ -22,8 +22,10 @@ services:
             - 8000:8000
         volumes:
             - ./api:/app
-        networks:
-            - api
+        # networks:
+        #     - api
+        environment:
+            DATABASE_URL: 'host=db user=postgres password=postgres dbname=postgres sslmode=disable'
         hostname: localhost
         depends_on:
             - db
@@ -39,9 +41,9 @@ services:
         volumes:
         - pgdata:/var/lib/postgresql/data
 
-networks:
-    api:
-    react:
+# networks:
+#     api:
+#     react:
 
 volumes:
     pgdata: {}
